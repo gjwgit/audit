@@ -38,4 +38,8 @@ clean::
 
 realclean:: clean
 	rm -rf *.mlm
-	rm -f *~ audit_rpart_riskchart.pdf
+	rm -f *~
+	rm -f  	audit_rpart_riskchart.pdf 	\
+	        audit_rpart_model.RData 	\
+		audit_rpart_model.pdf		\
+		data.csv	
