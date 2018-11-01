@@ -72,6 +72,27 @@ head(ds) %>% print.data.frame()
 
 tail(ds) %>% print.data.frame()
 
+# Convert marital to a binary married.
+
+ds %<>%
+  mutate(married=ifelse(marital=="Married", "yes", "no")) %>%
+  select(-marital)
+
+# Convert occupation to just two groups.
+
+labourers <- c("Cleaner", "Farming", "Machinist",
+               "Repair", "Service", "Transport")
+
+ds %<>%
+  mutate(occupation=ifelse(occupation %in% labourers, "labourer", "office"))
+
+# Convert education into two level
+
+tertiary <- c("Associate", "Bachelor", "College", "Doctorate", "Master", "Professional")
+
+ds %<>%
+  mutate(education=ifelse(education %in% tertiary, "tertiary", "secondary"))
+
 # Review a random sample of observations.
 
 sample_n(ds, size=6) %>% print.data.frame()
