@@ -11,5 +11,5 @@ if (Sys.getenv("DISPLAY") != "")
   pdf(fname)
   fancyRpartPlot(model, sub="")
   invisible(dev.off())
-  system(paste("xdg-open", fname))
+  system(paste("atril --preview", fname))
 }

@@ -86,9 +86,11 @@ if (Sys.getenv("DISPLAY") != "")
             show.precision=TRUE,
             legend.horiz=FALSE) %>% print()
   invisible(dev.off())
-  system(paste("xdg-open", fname), ignore.stderr=TRUE, wait=FALSE)
+  system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 
   cat("
+A risk chart plot has been built and will display in a separate window.
+
 The risk chart presents a cummulative performance view of the model.
 
 The x-axis represents the percentage of the caseload as we progress

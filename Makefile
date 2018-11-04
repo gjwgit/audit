@@ -25,7 +25,7 @@ include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
 
-$(MODEL).RData: train.R audit.csv
+$(MODEL)_rpart_model.RData: train.R audit.csv
 	Rscript $<
 
 data.csv:
