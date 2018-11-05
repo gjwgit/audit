@@ -12,8 +12,9 @@ meta:
   author      : Graham.Williams@togaware.com
   maintainer  : Graham.Williams@togaware.com
   filename     : pool/main/a/audit/audit_1.0.4.mlm
-  date         : 2018-11-04 20:41:36
-  dependencies: 
+  date         : 2018-11-05 13:33:27
+  dependencies:
+    sh: atril
     R: rpart, magrittr, caret, rpart.plot, RColorBrewer
 commands:
   demo    : Apply the model to a sample dataset.
