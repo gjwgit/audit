@@ -21,17 +21,12 @@ MODEL_FILES = 			\
 
 # Include standard Makefile templates.
 
-include ../mlhub.mk
 include ../git.mk
 include ../pandoc.mk
+include ../mlhub.mk
 
 $(MODEL)_rpart_model.RData: train.R audit.csv
 	Rscript $<
-
-data.csv:
-	Rsctipt train.R
-
-
 
 clean::
 	rm -rf README.txt output
