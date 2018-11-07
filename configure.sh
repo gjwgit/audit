@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo apt-get install atril
+sudo apt-get install -y atril

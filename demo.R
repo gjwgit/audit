@@ -3,8 +3,8 @@ Predict Audit Outcome
 =====================
 
 Below we show the predictions after applying the pre-built model to a
-dataset of previously unseen audit case outcomes. This provides an insight
-to how the pre-built model will perform when used on previously unseen cases.
+random subset of a dataset of previously unseen audit case outcomes.
+This provides an insight into the performance of the model.
 
 ")
 

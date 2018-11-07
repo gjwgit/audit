@@ -18,6 +18,9 @@ language (decision tree) is recognised as an easily understandable
 language which is why such a representation is quite popular in
 situations where explanations are important.
 
+Visit the github repository for examples of its usage:
+https://github.com/gjwgit/audit
+
 -----
 Usage
 -----
