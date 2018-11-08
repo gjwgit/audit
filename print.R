@@ -1,6 +1,6 @@
 library(rpart)
 
-load("audit_rpart_model.RData")
+load("rpart_model.RData")
 
 print(model)
 

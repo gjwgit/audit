@@ -8,6 +8,8 @@ This provides an insight into the performance of the model.
 
 ")
 
+# Load model, predict on a small dataset, present evaluation.
+
 suppressMessages(
 {
 library(rpart)        # Model: decision tree rpart().
@@ -20,7 +22,7 @@ library(tibble)
 
 # Load the pre-built model.
 
-load("audit_rpart_model.RData")
+load("rpart_model.RData")
 
 set.seed(4237)
 

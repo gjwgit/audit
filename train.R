@@ -237,4 +237,4 @@ model <- m_rp
 
 # Save the model to file.
 
-save(model, file="audit_rpart_model.RData")
+save(model, file="rpart_model.RData")
