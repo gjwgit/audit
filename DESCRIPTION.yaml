@@ -3,7 +3,7 @@ meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
   languages    : R
-  version      : 2.0.1
+  version      : 2.1.0
   keywords     : r, decision tree, rpart, classification
   modeller     : rpart
   type         : decision tree
@@ -12,8 +12,8 @@ meta:
   author       : Graham.Williams@togaware.com
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/audit
-  filename     : pool/main/a/audit/audit_2.0.1.mlm
-  date         : 2018-11-07 18:09:21
+  filename     : pool/main/a/audit/audit_2.1.0.mlm
+  date         : 2018-11-08 17:49:15
   dependencies:
     sh: atril
     R: rpart, magrittr, caret, rpart.plot, RColorBrewer
