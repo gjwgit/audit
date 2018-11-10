@@ -5,7 +5,7 @@
 # access from within mlhub. R itself is often operating system
 # installed though not necessarily.
 
-# Use atril to display PDF files. to avoid broken evince on Azure DSVM.
+# Use atril to display PDF files to avoid broken evince on Azure DSVM.
 
 cat("Install system dependencies if needed...\n atril\n\n")
 system("sudo apt-get install -y atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
@@ -35,7 +35,7 @@ lib <- file.path("./R")
 
 dir.create(lib, showWarnings=FALSE, recursive=TRUE)
 
-# Install any packages into the local R library.
+# Install packages into the local R library.
 
 if (length(install))
 {

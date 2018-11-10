@@ -6,18 +6,18 @@
 
 # List the files to be included in the .mlm package.
 
-MODEL_FILES = 			\
-	train.R			\
-	configure.R 		\
-	demo.R 			\
-	print.R 		\
-	display.R 		\
-	score.R 		\
-	README.txt		\
-	DESCRIPTION.yaml	\
-	audit.csv		\
-	data.csv 		\
-	audit_rpart_model.RData	\
+MODEL_FILES = 				\
+	train.R				\
+	configure.R 			\
+	demo.R 				\
+	print.R 			\
+	display.R 			\
+	score.R 			\
+	README.txt			\
+	DESCRIPTION.yaml		\
+	audit.csv			\
+	data.csv 			\
+	$(MODEL)_rpart_model.RData	\
 
 # Include standard Makefile templates.
 
@@ -36,7 +36,8 @@ clean::
 
 realclean:: clean
 	rm -rf $(MODEL)_*.mlm $(MODEL)_rpart_model.RData
-	rm -f  	audit_rpart_riskchart.pdf 	\
-	        audit_rpart_model.RData 	\
-		audit_rpart_model.pdf		\
-		data.csv	
+	rm -f  	rpart_riskchart.pdf 		\
+		rpart_model.pdf			\
+		varimp.pdf			\
+	        $(MODEL)_rpart_model.RData 	\
+		data.csv			\

@@ -1,3 +1,6 @@
+# The display command aims to provide a visualisation of the model in
+# some form. This will differ from model to model.
+
 cat("=============
 Decision Tree
 =============
@@ -12,16 +15,40 @@ has the final decision together with the class probabilities.
 
 suppressMessages(
 {
-library(rattle)
+library(rattle)      # Support: normVarNames(), weatherAUS. 
 })
 
 load("audit_rpart_model.RData")
 
 if (Sys.getenv("DISPLAY") != "")
 {
+  cat("
+To display the decision tree press <Enter>: ")
+  invisible(readChar("stdin", 1))
+
   fname <- "rpart_model.pdf"
   pdf(fname)
   fancyRpartPlot(model, sub="")
+  invisible(dev.off())
+  system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
+
+  cat("
+Close the graphic window using Ctrl-W.
+To display the vairable importance plot press <Enter>: ")
+  invisible(readChar("stdin", 1))
+
+cat("
+===================
+Variable Importance
+===================
+
+An understanding of the relative importance of each of the variables
+adds further insight into the data.
+")
+  
+  fname <- "varimp.pdf"
+  pdf(fname)
+  print(ggVarImp(model))
   invisible(dev.off())
   system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 }

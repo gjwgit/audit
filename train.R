@@ -2,6 +2,8 @@
 # illustrate the model build and then save the model to file so that
 # we can later load the model and use it to score new datasets.
 
+suppressMessages(
+{
 library(tidyverse)    # ggplot2, tibble, tidyr, readr, purr, dplyr
 library(rpart)
 library(magrittr)     # Pipe operator %>% %<>% %T>% equals().
@@ -9,6 +11,7 @@ library(stringi)      # String concat operator %s+%.
 library(rattle)
 library(stringr)
 library(randomForest) # Impute missing values with na.roughfix()
+})
 
 # Name of the dataset.
 

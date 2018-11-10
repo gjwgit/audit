@@ -29,4 +29,4 @@ To install and run the pre-built model:
     $ ml configure audit
     $ ml demo audit
     $ ml print audit
-	$ ml display audit
+    $ ml display audit
