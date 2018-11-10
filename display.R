@@ -2,12 +2,12 @@ cat("=============
 Decision Tree
 =============
 
-A visual representation of a model can be quite insightful, and often
-more so than the printed textual representation. For a decision tree
+A visual representation of a model can often be more insightful
+than the printed textual representation. For a decision tree
 model, representing the discovered knowledge as a decision tree, we
 read the tree from top to bottom, traversing the path corresponding
-to the answer at each node. The leaf node has the final decision
-together with the probability.
+to the answer to the question presented at each node. The leaf node
+has the final decision together with the class probabilities.
 ")
 
 suppressMessages(
@@ -26,5 +26,7 @@ if (Sys.getenv("DISPLAY") != "")
   system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 }
 
-cat("\nPress Enter to continue: ")
+cat("
+Close the graphic window using Ctrl-W.
+Press Enter to finish: ")
 invisible(readChar("stdin", 1))

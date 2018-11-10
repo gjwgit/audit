@@ -4,5 +4,6 @@ load("audit_rpart_model.RData")
 
 print(model)
 
-cat("\nPress Enter to continue: ")
+cat("
+Press Enter to finish: ")
 invisible(readChar("stdin", 1))

@@ -1,14 +1,19 @@
+########################################################################
+# Introduce the concept of decision tree model through MLHub
+#
+# Copyright 2018 Graham.Williams@togaware.com
+
 cat("=====================
 Predict Audit Outcome
 =====================
 
 Below we show the predictions after applying the pre-built model to a
 random subset of a dataset of previously unseen audit case outcomes.
-This provides an insight into the performance of the model.
+This provides an insight into the future performance of the model.
 
 ")
 
-# Load model, predict on a small dataset, present evaluation.
+# Load required packages.
 
 suppressMessages(
 {
@@ -20,7 +25,9 @@ library(ggplot2)      # Visualise data.
 library(tibble)
 })
 
+#-----------------------------------------------------------------------
 # Load the pre-built model.
+#-----------------------------------------------------------------------
 
 load("audit_rpart_model.RData")
 
@@ -39,7 +46,9 @@ read.csv("data.csv") %T>%
   {sample_n(., 13) %>% print()} ->
 ev
 
+#-----------------------------------------------------------------------
 # Produce confusion matrix using Rattle.
+#-----------------------------------------------------------------------
 
 cat("\nPress Enter to continue on to the Confusion Matrix: ")
 invisible(readChar("stdin", 1))
@@ -132,5 +141,7 @@ if (Sys.getenv("DISPLAY") != "")
   system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 }
 
-cat("\nPress Enter to finish the demonstration: ")
+cat("
+Close the graphic window using Ctrl-W.
+Press Enter to finish the demonstration: ")
 invisible(readChar("stdin", 1))
