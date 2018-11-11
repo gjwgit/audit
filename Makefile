@@ -15,7 +15,7 @@ MODEL_FILES = 				\
 	score.R 			\
 	README.txt			\
 	DESCRIPTION.yaml		\
-	audit.csv			\
+	$(MODEL).csv			\
 	data.csv 			\
 	$(MODEL)_rpart_model.RData	\
 
@@ -25,7 +25,7 @@ include ../git.mk
 include ../pandoc.mk
 include ../mlhub.mk
 
-$(MODEL)_rpart_model.RData: train.R audit.csv
+$(MODEL)_rpart_model.RData: train.R $(MODEL).csv
 	Rscript $<
 
 data.csv: train.R audit.csv
@@ -35,8 +35,8 @@ clean::
 	rm -rf README.txt output
 
 realclean:: clean
-	rm -rf $(MODEL)_*.mlm $(MODEL)_rpart_model.RData
-	rm -f  	rpart_riskchart.pdf 		\
+	rm -f 	$(MODEL)_*.mlm
+	rm -f 	rpart_riskchart.pdf 		\
 		rpart_model.pdf			\
 		varimp.pdf			\
 	        $(MODEL)_rpart_model.RData 	\
