@@ -8,7 +8,7 @@
 # Use atril to display PDF files to avoid broken evince on Azure DSVM.
 
 cat("Install system dependencies if needed...\n atril\n\n")
-system("sudo apt-get install -y atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
+system("sudo apt-get install --yes atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
 
 # Identify the required R packages for this model.
 
