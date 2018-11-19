@@ -8,11 +8,11 @@
 
 MODEL_FILES = 				\
 	train.R				\
-	configure.R 			\
+	configure.R			\
 	demo.R 				\
-	print.R 			\
+	print.R				\
 	display.R 			\
-	score.R 			\
+	score.R				\
 	README.txt			\
 	DESCRIPTION.yaml		\
 	$(MODEL).csv			\
