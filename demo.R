@@ -50,7 +50,7 @@ ev
 # Produce confusion matrix using Rattle.
 #-----------------------------------------------------------------------
 
-cat("\nPress Enter to continue on to the Confusion Matrix: ")
+cat("Press Enter to continue on to the Confusion Matrix: ")
 invisible(readChar("stdin", 1))
 
 cat("
