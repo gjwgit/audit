@@ -1,0 +1,22 @@
+--- # Audit
+meta:
+  name         : audit
+  title        : Classic financial audit predictive classification model.
+  keywords     : r, decision tree, rpart, classification
+  version      : 3.0.0
+  languages    : R
+  modeller     : rpart
+  type         : decision tree
+  display      : demo, display
+  license      : gpl3
+  author       : Graham.Williams@togaware.com
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/audit
+dependencies:
+  system: atril
+  cran: rpart, magrittr, rpart.plot, RColorBrewer
+  files: data.csv
+commands:
+  demo    : Apply model to a sample dataset and evaluate.
+  print   : View a textual summary of the model.
+  display : View a graphical representation of the model.
