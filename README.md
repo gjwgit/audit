@@ -24,9 +24,9 @@ Usage
 
 To install and run the pre-built model:
 
-    $ pip install mlhub
-    $ ml install audit
+    $ pip3 install mlhub
+    $ ml install   audit
     $ ml configure audit
-    $ ml demo audit
-    $ ml print audit
-    $ ml display audit
+    $ ml demo      audit
+    $ ml print     audit
+    $ ml display   audit
