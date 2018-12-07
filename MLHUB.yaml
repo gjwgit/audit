@@ -13,9 +13,9 @@ meta:
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/audit
 dependencies:
-  system: atril
-  cran: rpart, magrittr, rpart.plot, RColorBrewer
-  files: data.csv
+  system : atril
+  cran   : rpart, magrittr, rpart.plot, RColorBrewer
+  files  : data.csv
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
