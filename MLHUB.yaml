@@ -1,4 +1,3 @@
---- # Audit
 meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
@@ -15,7 +14,8 @@ meta:
 dependencies:
   system : atril
   cran   : rpart, magrittr, rpart.plot, RColorBrewer
-  files  : data.csv
+  files  : data.csv, audit_rpart_model.RData,
+           https://rattle.togaware.com/audit.csv
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
