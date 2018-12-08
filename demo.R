@@ -7,9 +7,10 @@ cat("=====================
 Predict Audit Outcome
 =====================
 
-Below we show the predictions after applying the pre-built model to a
-random subset of a dataset of previously unseen audit case outcomes.
-This provides an insight into the future performance of the model.
+Below we see the predictions after applying the pre-built decision tree
+model to a random subset of a dataset of previously unseen audit case
+outcomes. This provides an insight into the expected future performance
+of the model.
 
 ")
 
@@ -50,7 +51,7 @@ ev
 # Produce confusion matrix using Rattle.
 #-----------------------------------------------------------------------
 
-cat("Press Enter to continue on to the Confusion Matrix: ")
+cat("\nPress Enter to continue on to a Confusion Matrix: ")
 invisible(readChar("stdin", 1))
 
 cat("
@@ -78,7 +79,7 @@ cat(sprintf("Average class error: %.0f%%\n", mean(per[,"Error"], na.rm=TRUE)))
 # as integers are 1 and 2, so map to 0 and 1 to work with
 # probabilities.
 
-cat("\nPress Enter to continue on to the Risk Chart: ")
+cat("\nPress Enter to continue on to a Risk Chart: ")
 invisible(readChar("stdin", 1))
 
 cat("
@@ -103,6 +104,13 @@ caseload (the recall).
 To deploy the model the decision maker (chief auditor) will trade the
 recall against the caseload depending on auditing resources available
 and risk tolerance.
+
+In terms of model performance, the more area under the curve (both
+adjusted and adjustment) the better the model. A perfect model would
+follow the grey line (for adjusted) and the pink line (for adjustment).
+
+The Precision line representes the lift offered by the model, with the
+lift values on the right hand axis.
 ")
 
 ev$Actual %>%
