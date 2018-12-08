@@ -23,7 +23,7 @@ load("audit_rpart_model.RData")
 if (Sys.getenv("DISPLAY") != "")
 {
   cat("
-To display the decision tree press <Enter>: ")
+Press Enter to display the decision tree: ")
   invisible(readChar("stdin", 1))
 
   fname <- "rpart_model.pdf"
@@ -34,7 +34,7 @@ To display the decision tree press <Enter>: ")
 
   cat("
 Close the graphic window using Ctrl-w.
-To display the vairable importance plot press <Enter>: ")
+Press Enter to display the vairable importance plot: ")
   invisible(readChar("stdin", 1))
 
 cat("
