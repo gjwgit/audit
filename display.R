@@ -6,7 +6,7 @@ Decision Tree
 =============
 
 A visual representation of a model can often be more insightful
-than the printed textual representation. For a decision tree
+than the textual representation. For a decision tree
 model, representing the discovered knowledge as a decision tree, we
 read the tree from top to bottom, traversing the path corresponding
 to the answer to the question presented at each node. The leaf node
@@ -33,7 +33,7 @@ To display the decision tree press <Enter>: ")
   system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 
   cat("
-Close the graphic window using Ctrl-W.
+Close the graphic window using Ctrl-w.
 To display the vairable importance plot press <Enter>: ")
   invisible(readChar("stdin", 1))
 
@@ -43,8 +43,11 @@ Variable Importance
 ===================
 
 An understanding of the relative importance of each of the variables
-adds further insight into the data.
-")
+adds further insight into the data. The actual numeric values mean little
+but the relativities are significant.
+
+Press Enter to display the plot: ")
+invisible(readChar("stdin", 1))
   
   fname <- "varimp.pdf"
   pdf(fname)
