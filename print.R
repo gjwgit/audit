@@ -24,6 +24,7 @@ library(rpart)
 
 load("audit_rpart_model.RData")
 
+cat("\n")
 print(model)
 
 cat("
