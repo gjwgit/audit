@@ -2,7 +2,7 @@ meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
   keywords     : r, decision tree, rpart, classification
-  version      : 3.0.1
+  version      : 3.0.2
   languages    : R
   modeller     : rpart
   type         : decision tree
@@ -14,8 +14,7 @@ meta:
 dependencies:
   system : atril
   cran   : rpart, magrittr, rpart.plot, RColorBrewer
-  files  : data.csv, audit_rpart_model.RData,
-           https://rattle.togaware.com/audit.csv
+  files  : data.csv, audit_rpart_model.RData
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
