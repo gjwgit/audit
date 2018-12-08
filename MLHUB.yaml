@@ -2,7 +2,7 @@ meta:
   name         : audit
   title        : Classic financial audit predictive classification model.
   keywords     : r, decision tree, rpart, classification
-  version      : 3.0.0
+  version      : 3.0.1
   languages    : R
   modeller     : rpart
   type         : decision tree
