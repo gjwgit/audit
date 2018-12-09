@@ -59,9 +59,16 @@ cat("
 Confusion Matrix
 ================
 
-A confusion matrix summarises the performance of the model on this
-dataset. The figures here are percentages, aggregating the actual versus
-predicted outcomes. The Error column represents the class error.
+A confusion matrix summarises the performance of the model on this evluation
+dataset. All figures in the table are percentages and are calculated across
+the predicitions made by the model for each observation and compared to the
+actual or known values of the target variable. The first column reports the
+true negative and false negative rates whilst the second column reports the
+false positive and true positive rates.
+
+The Error column calculates the error across each class. We also report the
+overall error which is calculated as the number of errors over the number of
+observations. The average of the class errors is also reported. 
 
 ")
 
