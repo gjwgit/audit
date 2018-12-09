@@ -87,30 +87,23 @@ cat("
 Risk Chart
 ==========
 
-A risk chart will now be generated and displayed in a separate window.
+A risk chart presents a cumulative performance view of the model.
 
-The risk chart presents a cumulative performance view of the model.
+The x-axis is the percentage of caseload as we progress (left to right)
+through cases from the highest probability of an adjustment being made to
+the financial data to the lowest probability of an adjustment.
 
-The x-axis represents the percentage of the caseload as we progress
-(left to right) through cases from the highest probability of an
-adjustment being made to the financial data to the lowest probability
-of an adjustment.
+The y-axis is the expected performance of the model in selecting customers
+to audit. It is the percentage of the known positive outcomes that are
+predicted by the model for the given caseload (the recall).
 
-The y-axis is a measure of expected performance when using the model
-to select customers to audit. It reports the percentage of the known
-positive outcomes that are predicted by the model for the given
-caseload (the recall).
+To deploy the model the decision maker will trade recall against caseload
+in accordance with availalbe auditing resources and risk tolerance.
 
-To deploy the model the decision maker (chief auditor) will trade the
-recall against the caseload depending on auditing resources available
-and risk tolerance.
-
-In terms of model performance, the more area under the curve (both
-adjusted and adjustment) the better the model. A perfect model would
-follow the grey line (for adjusted) and the pink line (for adjustment).
-
-The Precision line representes the lift offered by the model, with the
-lift values on the right hand axis.
+The more area under the curve (both adjusted and adjustment) the better
+the model performance. A perfect model would follow the grey line (for
+adjusted) and the pink line (for adjustment). The Precision line represents
+the lift offered by the model, with the lift values on the right hand axis.
 ")
 
 ev$Actual %>%
