@@ -36,8 +36,6 @@ clean::
 
 realclean:: clean
 	rm -f 	$(MODEL)_*.mlm
-	rm -f 	rpart_riskchart.pdf 		\
+	rm -f 	$(MODEL)_rpart_riskchart.pdf 	\
 		rpart_model.pdf			\
 		varimp.pdf			\
-	        $(MODEL)_rpart_model.RData 	\
-		data.csv			\
