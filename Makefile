@@ -2,6 +2,10 @@
 #
 # Makefile for audit pre-built ML model
 #
+# Copyright (c) Graham.Williams@togaware.com
+#
+# License: Creative Commons Attribution-ShareAlike 4.0 International.
+#
 ########################################################################
 
 # Include standard Makefile templates.
