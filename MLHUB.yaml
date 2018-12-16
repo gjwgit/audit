@@ -14,14 +14,14 @@ meta:
   url          : https://github.com/gjwgit/audit
   filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
-  system :
+  system:
     - atril
-  cran   :
+  cran:
     - rpart
     - magritt
     - rpart.plot
     - RColorBrewer
-  files  :
+  files:
     - data.csv
     - audit_rpart_model.RData
 commands:
