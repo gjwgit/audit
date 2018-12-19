@@ -15,8 +15,8 @@ meta:
   filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
   system : atril
-  cran   : rpart, magrittr, rpart.plot, RColorBrewer
-  files  : data.csv, audit_rpart_model.RData
+  cran   : rpart, magrittr, rpart.plot, RColorBrewer, dplyr, rattle
+#  files  : data.csv, audit_rpart_model.RData
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
