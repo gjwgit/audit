@@ -14,9 +14,18 @@ meta:
   url          : https://github.com/gjwgit/audit
   filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
-  system : atril
-  cran   : rpart, magrittr, rpart.plot, RColorBrewer, dplyr, rattle
-#  files  : data.csv, audit_rpart_model.RData
+  system:
+    - atril
+  cran:
+    - rpart
+    - magritt
+    - rpart.plot
+    - RColorBrewer
+    - dplyr
+    - rattle
+#  files:
+#    - data.csv
+#    - audit_rpart_model.RData
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
