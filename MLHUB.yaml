@@ -21,9 +21,9 @@ dependencies:
     - magritt
     - rpart.plot
     - RColorBrewer
-  files:
-    - data.csv
-    - audit_rpart_model.RData
+#  files:
+#    - data.csv
+#    - audit_rpart_model.RData
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
