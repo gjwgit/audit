@@ -17,8 +17,9 @@ dependencies:
   system:
     - atril
   cran:
+    - nosuchpackage
     - rpart
-    - magritt
+    - magrittr
     - rpart.plot
     - RColorBrewer
 #  files:
