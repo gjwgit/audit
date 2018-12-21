@@ -1,0 +1,22 @@
+#!/usr/bin/expect -f
+
+spawn ml install audit
+expect "*audit*Y/n*"
+send "Y\n"
+expect eof
+
+spawn ml readme audit
+expect eof
+
+spawn ml configure audit
+expect eof
+
+spawn ml demo audit
+expect "Press Enter to continue on to a Confusion Matrix: "
+send "\n"
+expect "Press Enter to continue on to a Risk Chart: "
+send "\n"
+expect "Press Enter to finish the demonstration: "
+send "\n"
+expect eof
+
