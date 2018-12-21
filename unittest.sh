@@ -2,7 +2,11 @@
 
 MODEL="audit"
 
-/usr/bin/expect <<EOD
+date +"%Y-%m-%d %H:%M:%S"
+
+time /usr/bin/expect <<EOD
+set timeout 60
+
 spawn ml install ${MODEL}
 expect "*${MODEL}*Y/n*"
 send "Y\n"
@@ -25,6 +29,7 @@ expect eof
 
 EOD
 
-ls -lh ~/.mlhub/${MODEL}/audit_rpart_riskchart.pdf
-
-
+echo
+ls -lht ~/.mlhub/${MODEL}/audit_rpart_riskchart.pdf
+echo
+date +"%Y-%m-%d %H:%M:%S"
