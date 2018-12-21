@@ -20,3 +20,4 @@ expect "Press Enter to finish the demonstration: "
 send "\n"
 expect eof
 
+system ls -lh ~/.mlhub/audit/audit_rpart_riskchart.pdf
