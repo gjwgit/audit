@@ -22,6 +22,8 @@ dependencies:
     - magrittr
     - rpart.plot
     - RColorBrewer
+    - dplyr
+    - rattle
   files:
     - audit.csv
     - audit_rpart_model.RData
