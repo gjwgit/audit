@@ -134,18 +134,19 @@ pr
 
 # Display the risk chart.
 
+fname <- "audit_rpart_riskchart.pdf"
+pdf(file=fname, width=5, height=5)
+riskchart(pr, ac, ad,
+          title="Risk Chart for Decision Tree Model",
+          risk.name="adjustment",
+          recall.name="adjusted",
+          show.lift=TRUE,
+          show.precision=TRUE,
+          legend.horiz=FALSE) %>% print()
+invisible(dev.off())
+
 if (Sys.getenv("DISPLAY") != "")
 {
-  fname <- "audit_rpart_riskchart.pdf"
-  pdf(file=fname, width=5, height=5)
-  riskchart(pr, ac, ad,
-            title="Risk Chart for Decision Tree Model",
-            risk.name="adjustment",
-            recall.name="adjusted",
-            show.lift=TRUE,
-            show.precision=TRUE,
-            legend.horiz=FALSE) %>% print()
-  invisible(dev.off())
   system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 }
 
