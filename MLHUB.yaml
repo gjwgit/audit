@@ -22,9 +22,19 @@ dependencies:
     - magrittr
     - rpart.plot
     - RColorBrewer
-#  files:
-#    - data.csv
-#    - audit_rpart_model.RData
+    - dplyr
+    - rattle
+  files:
+    - audit.csv
+    - audit_rpart_model.RData
+    - data.csv
+    - demo.R
+    - display.R
+    - LICENSE
+    - print.R
+    - README.md
+    - score.R
+    - train.R
 commands:
   demo    : Apply model to a sample dataset and evaluate.
   print   : View a textual summary of the model.
