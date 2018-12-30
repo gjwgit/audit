@@ -15,9 +15,12 @@ meta:
   filename     : pool/main/a/audit/audit_2.2.1.mlm
 dependencies:
   system:
-    - atril
+    - atril       # PDF viewer.
+    - r-base      # Should be mlhub dependency.
+    - libxml2-dev # For rattle install from source.
+    - r-cran-devtools # Should be mlhub dependency.
   cran:
-    - nosuchpackage
+    - nosuchpackage # TESTING - should fail.
     - rpart
     - magrittr
     - rpart.plot
