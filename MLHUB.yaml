@@ -15,8 +15,6 @@ meta:
 dependencies:
   system:
     - atril       # PDF viewer.
-    - r-base      # Should be mlhub dependency.
-    - libxml2-dev # For rattle install from source.
   cran:
     # These will download from CRAN if later than r-cran- version
     # Eventually introduce r: so uses r-cran- version instead
