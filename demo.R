@@ -7,7 +7,7 @@ cat("=====================
 Predict Audit Outcome
 =====================
 
-Below we see the predictions after applying the pre-built decision tree
+Below we show the predictions after applying the pre-built decision tree
 model to a random subset of a dataset of previously unseen audit case
 outcomes. This provides an insight into the expected future performance
 of the model.
