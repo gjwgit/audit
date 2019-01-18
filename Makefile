@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Makefile for audit pre-built ML model
+# Makefile for pre-built ML model
 #
 # Copyright (c) Graham.Williams@togaware.com
 #
