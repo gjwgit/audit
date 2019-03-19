@@ -44,6 +44,7 @@ read.csv("data.csv") %T>%
   set_names(c("Predicted", "Actual")) %>%
   select(Actual, Predicted) %>%
   mutate(Error=ifelse(Predicted==Actual, "", "<----")) %T>%
+  {dim(.) %>% print()} %T>%
   {sample_n(., 12) %>% print()} ->
 ev
 
