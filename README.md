@@ -22,11 +22,14 @@ Visit the github repository for more details:
 Usage
 -----
 
-To install and run the pre-built model:
+- To install mlhub
 
-    $ pip3 install mlhub
-    $ ml install   audit
-    $ ml configure audit
-    $ ml demo      audit
-    $ ml print     audit
-    $ ml display   audit
+		$ pip3 install mlhub
+
+- To install and run the pre-built model:
+
+		$ ml install   audit
+		$ ml configure audit
+		$ ml demo      audit
+		$ ml print     audit
+		$ ml display   audit
