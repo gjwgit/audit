@@ -34,6 +34,7 @@ Press Enter to display the decision tree: ")
 
   cat("
 Close the graphic window using Ctrl-w.
+
 Press Enter to display the vairable importance plot: ")
   invisible(readChar("stdin", 1))
 
@@ -58,5 +59,6 @@ invisible(readChar("stdin", 1))
 
 cat("
 Close the graphic window using Ctrl-W.
+
 Press Enter to finish: ")
 invisible(readChar("stdin", 1))
