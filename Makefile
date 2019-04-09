@@ -32,6 +32,10 @@ endif
 $(MODEL)_rpart_model.RData: train.R $(MODEL).csv
 	Rscript $<
 
+%.png: %.pdf
+	pdftoppm $^ $(@:.png=) -png
+	mv $(@:.png=-1.png) $@
+
 data.csv: train.R audit.csv
 	Rscript $<
 
