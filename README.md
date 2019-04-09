@@ -99,7 +99,7 @@ the class probabilities.
 Press Enter to display the decision tree: 
 ```
 
-![](audit_rpart_model.pdf)
+![](audit_rpart_model.png)
 
 ```console
 Close the graphic window using Ctrl-w.
