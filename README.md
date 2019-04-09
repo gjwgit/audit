@@ -24,17 +24,16 @@ Usage
 
 - To install mlhub
 
-```console
-$ pip3 install mlhub
-```
+	```console
+	$ pip3 install mlhub
+	```	
 
-- To install and run the pre-built model:
+- To install and configure the pre-built model:
 
-```console
-$ ml install   audit
-$ ml configure audit
-$ ml demo      audit
-```
+	```console
+	$ ml install   audit
+	$ ml configure audit
+	```
 
 Demonstration
 -------------
@@ -209,6 +208,28 @@ Close the graphic window using Ctrl-w.
 Thank you for exploring the 'audit' package.
 ```
 
+Coming Soon
+-----------
+
+A few commands are in the pipeline and available from the github
+repository.
+
+- To score your own dataset of cases:
+
+	```console
+	$ ml score audit <data.csv>
+	```
+
+- To rebuild the model using your own dataset in a csv file that has a
+  column named TARGET:
+
+	```console
+	$ ml train audit <data.csv>
+	```
+
+   It actually does not matter what the other columns of the file are,
+   the command will build a decision tree to predict the TARGET!.
+   
 References
 ----------
 
