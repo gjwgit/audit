@@ -35,6 +35,7 @@ $(MODEL)_rpart_model.RData: train.R $(MODEL).csv
 %.png: %.pdf
 	pdftoppm $^ $(@:.png=) -png
 	mv $(@:.png=-1.png) $@
+	mogrify -resize 50% $@
 
 data.csv: train.R audit.csv
 	Rscript $<
