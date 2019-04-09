@@ -205,4 +205,6 @@ Press Enter to display the risk chart:
 ```console
 Close the graphic window using Ctrl-w.
 
+
+Thank you for exploring the 'audit' package.
 ```
