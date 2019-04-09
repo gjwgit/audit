@@ -208,3 +208,15 @@ Close the graphic window using Ctrl-w.
 
 Thank you for exploring the 'audit' package.
 ```
+
+References
+----------
+
+[End-to-End Data Science: Audit Use Case](https://essentials.togaware.com/audit.pdf)
+
+[Rattle – the R Analytical Tool To Learn
+Easily](https://bit.ly/rattle_data_mining)
+
+[Rattle Web Site](https://rattle.togaware.com)
+
+[Essentials of Data Science](http://bit.ly/essentials_data_science)
