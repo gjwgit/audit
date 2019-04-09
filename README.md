@@ -115,7 +115,11 @@ adds further insight into the data. The actual numeric values mean little
 but the relativities are significant.
 
 Press Enter to display the plot: 
+```
 
+![](audit_rpart_varimp.png)
+
+```console
 Close the graphic window using Ctrl-W.
 
 Press Enter to continue: 
@@ -194,7 +198,11 @@ adjusted) and the pink line (for adjustment). The Precision line represents
 the lift offered by the model, with the lift values on the right hand axis.
 
 Press Enter to display the risk chart: 
+```
 
+![](audit_rpart_riskchart.png)
+
+```console
 Close the graphic window using Ctrl-w.
 
 ```
