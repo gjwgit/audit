@@ -1,16 +1,17 @@
 ########################################################################
 # Introduce the concept of decision tree model through MLHub
 #
-# Copyright 2018 Graham.Williams@togaware.com
+# Copyright 2018-2019 Graham.Williams@togaware.com
 
-cat("=====================
-Predict Audit Outcome
-=====================
+cat("=========================
+Audit Decision Tree Model
+=========================
 
-Below we show the predictions after applying the pre-built decision tree
-model to a random subset of a dataset of previously unseen audit case
-outcomes. This provides an insight into the expected future performance
-of the model.
+A common machine learning task is classification where we classify people,
+for example, into two classes. A decision tree model can be trained to
+predict whether a person belongs to one class or the other. In this MLHub
+package a pre-built decision tree model is loaded to predict the likely
+outcome of a financial audit of a tax payer, as an example.
 
 ")
 
@@ -34,6 +35,96 @@ load("audit_rpart_model.RData")
 
 set.seed(4237)
 
+cat("Press Enter to continue: ")
+invisible(readChar("stdin", 1))
+
+cat("
+=================================
+Textual Presentation of the Model
+=================================
+
+The textual presentation of the model is the default output from the R package
+for decision trees. It begins with a record of the number of observations
+used to build the model (n=). The following two lines of text are a legend
+to assist with the interpretation of the tree.
+
+")
+
+print(model)
+
+cat("
+Press Enter to continue: ")
+invisible(readChar("stdin", 1))
+
+cat("
+=============
+Decision Tree
+=============
+
+A visual representation of a model can often be more insightful than the
+textual representation. For a decision tree model, representing the
+discovered knowledge as a decision tree, we read the tree from top to
+bottom, traversing the path corresponding to the answer to the question
+presented at each node. The leaf node has the final decision together with
+the class probabilities.
+")
+
+if (Sys.getenv("DISPLAY") != "")
+{
+  cat("
+Press Enter to display the decision tree: ")
+  invisible(readChar("stdin", 1))
+
+  fname <- "audit_rpart_model.pdf"
+  pdf(fname)
+  fancyRpartPlot(model, sub="")
+  invisible(dev.off())
+  system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
+
+  cat("
+Close the graphic window using Ctrl-w.
+
+Press Enter to continue: ")
+  invisible(readChar("stdin", 1))
+
+cat("
+===================
+Variable Importance
+===================
+
+An understanding of the relative importance of each of the variables
+adds further insight into the data. The actual numeric values mean little
+but the relativities are significant.
+
+Press Enter to display the plot: ")
+invisible(readChar("stdin", 1))
+  
+  fname <- "audit_rpart_varimp.pdf"
+  pdf(fname)
+  print(ggVarImp(model))
+  invisible(dev.off())
+  system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
+}
+
+cat("
+Close the graphic window using Ctrl-W.
+
+Press Enter to continue: ")
+invisible(readChar("stdin", 1))
+
+cat("
+=====================
+Predict Audit Outcome
+=====================
+
+We can use this model to predict the outcome of an audit. Below we show the
+predictions after applying the pre-built decision tree model to a random
+subset of a dataset of previously unseen audit case outcomes. This provides
+an insight into the expected future performance of the model when we decide
+to deploy the model into a production system.
+
+")
+
 # Load a sample dataset, predict, and display a sample of predictions.
 
 read.csv("data.csv") %T>%
@@ -44,7 +135,6 @@ read.csv("data.csv") %T>%
   set_names(c("Predicted", "Actual")) %>%
   select(Actual, Predicted) %>%
   mutate(Error=ifelse(Predicted==Actual, "", "<----")) %T>%
-  {dim(.) %>% print()} %T>%
   {sample_n(., 12) %>% print()} ->
 ev
 
@@ -52,7 +142,7 @@ ev
 # Produce confusion matrix using Rattle.
 #-----------------------------------------------------------------------
 
-cat("\nPress Enter to continue on to a Confusion Matrix: ")
+cat("\nPress Enter to continue: ")
 invisible(readChar("stdin", 1))
 
 cat("
@@ -87,7 +177,7 @@ cat(sprintf("Average class error: %.0f%%\n", mean(per[,"Error"], na.rm=TRUE)))
 # as integers are 1 and 2, so map to 0 and 1 to work with
 # probabilities.
 
-cat("\nPress Enter to continue on to a Risk Chart: ")
+cat("\nPress Enter to continue: ")
 invisible(readChar("stdin", 1))
 
 cat("
@@ -148,11 +238,12 @@ invisible(dev.off())
 
 if (Sys.getenv("DISPLAY") != "")
 {
+  cat("
+Press Enter to display the risk chart: ")
+  invisible(readChar("stdin", 1))
   system(paste("atril --preview", fname), ignore.stderr=TRUE, wait=FALSE)
 }
 
 cat("
 Close the graphic window using Ctrl-w.
-
-Press Enter to finish the demonstration: ")
-invisible(readChar("stdin", 1))
+")
