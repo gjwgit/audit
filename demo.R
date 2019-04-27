@@ -5,7 +5,7 @@
 
 library(mlhub)
 
-inform_about("Audit Decision Tree Model",
+mlcat("Audit Decision Tree Model",
 "A common machine learning task is classification where we classify people,
 for example, into two classes. A decision tree model can be trained to
 predict whether a person belongs to one class or the other. In this MLHub
@@ -32,9 +32,9 @@ load("audit_rpart_model.RData")
 
 set.seed(4237)
 
-ask_continue()
+mlask()
 
-inform_about("Textual Presentation of the Model",
+mlcat("Textual Presentation of the Model",
 "The textual presentation of the model is the default output from the R package
 for decision trees. It begins with a record of the number of observations
 used to build the model (n=). The following two lines of text are a legend
@@ -43,9 +43,9 @@ to assist with the interpretation of the tree.
 
 print(model)
 
-ask_continue()
+mlask()
 
-inform_about("Decision Tree",
+mlcat("Decision Tree",
 "A visual representation of a model can often be more insightful than the
 textual representation. For a decision tree model, representing the
 discovered knowledge as a decision tree, we read the tree from top to
@@ -59,11 +59,11 @@ pdf(fname)
 fancyRpartPlot(model, sub="")
 invisible(dev.off())
 
-preview_file(fname)
+mlpreview(fname)
 
-ask_continue()
+mlask()
 
-inform_about("Variable Importance",
+mlcat("Variable Importance",
 "An understanding of the relative importance of each of the variables
 adds further insight into the data. The actual numeric values mean little
 but the relativities are significant.
@@ -74,11 +74,11 @@ pdf(fname)
 print(ggVarImp(model))
 invisible(dev.off())
 
-preview_file(fname)
+mlpreview(fname)
 
-ask_continue()
+mlask()
 
-inform_about("Predict Audit Outcome",
+mlcat("Predict Audit Outcome",
 "We can use this model to predict the outcome of an audit. Below we show the
 predictions after applying the pre-built decision tree model to a random
 subset of a dataset of previously unseen audit case outcomes. This provides
@@ -103,9 +103,9 @@ ev
 # Produce confusion matrix using Rattle.
 #-----------------------------------------------------------------------
 
-ask_continue()
+mlask()
 
-inform_about("Confusion Matrix",
+mlcat("Confusion Matrix",
 "A confusion matrix summarises the performance of the model on this evluation
 dataset. All figures in the table are percentages and are calculated across
 the predicitions made by the model for each observation and compared to the
@@ -132,9 +132,9 @@ cat(sprintf("Average class error: %.0f%%\n", mean(per[,"Error"], na.rm=TRUE)))
 # as integers are 1 and 2, so map to 0 and 1 to work with
 # probabilities.
 
-ask_continue()
+mlask()
 
-inform_about("Risk Chart",
+mlcat("Risk Chart",
 "A risk chart presents a cumulative performance view of the model.
 
 The x-axis is the percentage of caseload as we progress (left to right)
@@ -186,4 +186,4 @@ riskchart(pr, ac, ad,
           legend.horiz=FALSE) %>% print()
 invisible(dev.off())
 
-preview_file(fname)
+mlpreview(fname)
